@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
 
 # Charger and USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.usb.vid=2970
+    ro.usb.vid=0E8D
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay

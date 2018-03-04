@@ -11,12 +11,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
 # Release name
 PRODUCT_RELEASE_NAME := f5c62w
 # Inherit device configuration
 $(call inherit-product, device/leagoo/f5c62w/full_f5c62w.mk)
 
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions

@@ -60,10 +60,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf \
     $(DEVICE_PATH)/configs/ht120.mtc:system/etc/.tp/.htc120.mtc
 
-# System Properties
-#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-#    persist.sys.usb.config=mtp
-
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREBUILT_DPI := xhdpi 280dpi hdpi tvdpi mdpi ldpi
@@ -76,10 +72,6 @@ TARGET_SCREEN_WIDTH := 720
 # Fingerprint
 PRODUCT_PACKAGES += \
     fingerprintd
-
-# GPS
-PRODUCT_PACKAGES += \
-    YGPS
 
 # Telephony
 SIM_COUNT := 2

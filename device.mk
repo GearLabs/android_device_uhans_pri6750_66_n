@@ -98,10 +98,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=bfq
 
 # Dalvik heap configurations
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-4096-dalvik-heap.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Call hwui memory config
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-hwui-memory.mk)
 
 # Inherit the rest from mt6737-common
 $(call inherit-product, device/mediatek/mt6737-common/mt6737.mk)

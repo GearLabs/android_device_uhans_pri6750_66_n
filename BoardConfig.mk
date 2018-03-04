@@ -19,18 +19,13 @@ DEVICE_PATH := device/leagoo/f5c62w
 include device/mediatek/mt6737-common/BoardConfigCommon.mk
 
 # Kernel informations
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_BASE := 0x40078000
+BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 enforcing=0 androidboot.selinux=permissive
-BOARD_MKBOOTIMG_ARGS := --board K11TA-A.A.vR14. --ramdisk_offset 0x04f88000 --second_offset 0x00e88000 --tags_offset 0x03f88000
+BOARD_RAMDISK_OFFSET := 0x04000000
+BOARD_TAGS_OFFSET := 0xE000000
 
 # Kernel properties
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-
-TARGET_KERNEL_SOURCE := kernel/ulefone/f5c62w
-TARGET_KERNEL_CONFIG := lineageos_f5c62w_defconfig
+TARGET_PREBUILT_KERNEL := device/leagoo/f5c62w/prebuilts/kernel
 
 TARGET_BOOTLOADER_BOARD_NAME := mt6737m
 

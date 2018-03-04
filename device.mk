@@ -16,6 +16,16 @@
 VENDOR_BLOBS ?= vendor/leagoo/f5c62w/f5c62w-vendor.mk
 $(call inherit-product-if-exists, $(VENDOR_BLOBS))
 
+# Kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := device/leagoo/f5c62w/prebuilts/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+
 # Charger and USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.vid=2970

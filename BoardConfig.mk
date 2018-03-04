@@ -18,6 +18,11 @@ DEVICE_PATH := device/leagoo/f5c62w
 
 include device/mediatek/mt6737-common/BoardConfigCommon.mk
 
+# Board
+BOARD_GLOBAL_CFLAGS += -DMTK_BATTERY_VOLTAGE
+FORCE_32_BIT := true
+SELINUX_PERMISSIVE := true
+
 # Kernel informations
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 2048

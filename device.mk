@@ -64,18 +64,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     $(DEVICE_PATH)/configs/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
-
-# Media
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(DEVICE_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
-
-# Thermal
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/thermal.conf:system/etc/.tp/thermal.conf \
-    $(DEVICE_PATH)/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf \
-    $(DEVICE_PATH)/configs/ht120.mtc:system/etc/.tp/.htc120.mtc
-
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREBUILT_DPI := xhdpi 280dpi hdpi tvdpi mdpi ldpi

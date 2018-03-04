@@ -13,13 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_BOARD_PLATFORM := mt6755
 
-DEVICE_PATH := device/ulefone/k11ta_a
+DEVICE_PATH := device/leagoo/f5c62w
 
 MTK_PROJECT_CONFIG ?= $(DEVICE_PATH)/ProjectConfig.mk
 include $(MTK_PROJECT_CONFIG)
-include device/cyanogen/mt6755-common/BoardConfigCommon.mk
+include device/mediatek/mt6737-common/BoardConfigCommon.mk
 
 MTK_INTERNAL_CDEFS := $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_NAME),$(if $(filter-out no NO none NONE false FALSE,$($(t))),-D$(t)))
 MTK_INTERNAL_CDEFS += $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_VALUE),$(if $(filter-out no NO none NONE false FALSE,$($(t))),$(foreach v,$(shell echo $($(t)) | tr '[a-z]' '[A-Z]'),-D$(v))))
@@ -39,10 +38,10 @@ BOARD_MKBOOTIMG_ARGS := --board K11TA-A.A.vR14. --ramdisk_offset 0x04f88000 --se
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
-TARGET_KERNEL_SOURCE := kernel/ulefone/k11ta_a
-TARGET_KERNEL_CONFIG := lineageos_k11ta_a_defconfig
+TARGET_KERNEL_SOURCE := kernel/ulefone/f5c62w
+TARGET_KERNEL_CONFIG := lineageos_f5c62w_defconfig
 
-TARGET_BOOTLOADER_BOARD_NAME := k11ta_a
+TARGET_BOOTLOADER_BOARD_NAME := mt6737m
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth

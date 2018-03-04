@@ -12,21 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/ulefone/k11ta_a/full_k11ta_a.mk)
+# Release name
+PRODUCT_RELEASE_NAME := f5c62w
+# Inherit device configuration
+$(call inherit-product, device/leagoo/f5c62w/full_f5c62w.mk)
 
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := f5c62w
+PRODUCT_NAME := lineage_f5c62w
+PRODUCT_BRAND := Kruger_Matz
+PRODUCT_MODEL := FLOW5PLUS
+PRODUCT_MANUFACTURER := KrugerMatz
 
-PRODUCT_NAME := lineage_k11ta_a
-BOARD_VENDOR := ulefone
-PRODUCT_DEVICE := k11ta_a
-
-PRODUCT_GMS_CLIENTID_BASE := android-ulefone
-
-PRODUCT_MANUFACTURER := Ulefone
-PRODUCT_MODEL := Ulefone Future
-
-PRODUCT_BRAND := Ulefone
-TARGET_VENDOR := ulefone
-TARGET_VENDOR_PRODUCT_NAME := Future
-TARGET_VENDOR_DEVICE_NAME := k11ta_a
+PRODUCT_GMS_CLIENTID_BASE := android-lechpol

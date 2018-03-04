@@ -15,11 +15,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from k11ta_a
-$(call inherit-product, device/ulefone/k11ta_a/device.mk)
+# Inherit from f5c62w
+$(call inherit-product, device/leagoo/f5c62w/device.mk)
 
-PRODUCT_DEVICE := k11ta_a
-PRODUCT_NAME := full_k11ta_a
-PRODUCT_BRAND := ulefone
-PRODUCT_MODEL := k11ta_a
-PRODUCT_MANUFACTURER := ulefone
+PRODUCT_DEVICE := f5c62w
+PRODUCT_NAME := lineage_f5c62w
+PRODUCT_BRAND := Kruger_Matz
+PRODUCT_MODEL := FLOW5PLUS
+PRODUCT_MANUFACTURER := KrugerMatz

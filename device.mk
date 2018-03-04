@@ -13,10 +13,10 @@
 # limitations under the License.
 #
 
-VENDOR_BLOBS ?= vendor/ulefone/k11ta_a/k11ta_a-vendor.mk
+VENDOR_BLOBS ?= vendor/leagoo/f5c62w/f5c62w-vendor.mk
 $(call inherit-product-if-exists, $(VENDOR_BLOBS))
 
-MTK_PROJECT_CONFIG ?= device/ulefone/k11ta_a/ProjectConfig.mk
+MTK_PROJECT_CONFIG ?= device/leagoo/f5c62w/ProjectConfig.mk
 include $(MTK_PROJECT_CONFIG)
 
 # Charger and USB
@@ -100,5 +100,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.mediatek.version.release=$(MTK_BUILD_VERNO) \
     ro.mediatek.chip_ver=$(MTK_CHIP_VER)
 
-# Inherit the rest from mt6755-common
-$(call inherit-product, device/cyanogen/mt6755-common/mt6755.mk)
+# Inherit the rest from mt6737-common
+$(call inherit-product, device/mediatek/mt6737-common/mt6737.mk)

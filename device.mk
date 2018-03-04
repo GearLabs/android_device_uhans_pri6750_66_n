@@ -16,9 +16,6 @@
 VENDOR_BLOBS ?= vendor/leagoo/f5c62w/f5c62w-vendor.mk
 $(call inherit-product-if-exists, $(VENDOR_BLOBS))
 
-MTK_PROJECT_CONFIG ?= device/leagoo/f5c62w/ProjectConfig.mk
-include $(MTK_PROJECT_CONFIG)
-
 # Charger and USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.vid=2970
@@ -94,11 +91,6 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-4096-dal
 
 # Call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
-
-# Versioning
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mediatek.version.release=$(MTK_BUILD_VERNO) \
-    ro.mediatek.chip_ver=$(MTK_CHIP_VER)
 
 # Inherit the rest from mt6737-common
 $(call inherit-product, device/mediatek/mt6737-common/mt6737.mk)

@@ -51,10 +51,12 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # TWRP
+ifeq ($(WITH_TWRP),true)
 DEVICE_RESOLUTION := 720x1280
 DEVICE_SCREEN_WIDTH := 720
 DEVICE_SCREEN_HEIGHT := 1280
 TW_THEME := portrait_hdpi
+endif
 
 # inherit from the proprietary version
 -include vendor/leagoo/f5c62w/BoardConfigVendor.mk

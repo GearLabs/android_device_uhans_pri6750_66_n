@@ -13,6 +13,7 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/leagoo/f5c62w
 VENDOR_BLOBS ?= vendor/leagoo/f5c62w/f5c62w-vendor.mk
 $(call inherit-product-if-exists, $(VENDOR_BLOBS))
 
@@ -35,7 +36,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.target.rc:root/init.target.rc
+    $(DEVICE_PATH)/rootdir/init.target.rc:root/init.target.rc
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -50,14 +51,14 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+    $(DEVICE_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    $(DEVICE_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal.conf:system/etc/.tp/thermal.conf \
-    $(LOCAL_PATH)/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf \
-    $(LOCAL_PATH)/configs/ht120.mtc:system/etc/.tp/.htc120.mtc
+    $(DEVICE_PATH)/configs/thermal.conf:system/etc/.tp/thermal.conf \
+    $(DEVICE_PATH)/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf \
+    $(DEVICE_PATH)/configs/ht120.mtc:system/etc/.tp/.htc120.mtc
 
 # System Properties
 #PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -87,7 +88,7 @@ PRODUCT_PROPERTY_OVERRIDES += persist.radio.default.sim=0
 PRODUCT_PROPERTY_OVERRIDES += persist.radio.multisim.config=dsds
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/ecc_list.xml:system/etc/ecc_list.xml
+    $(DEVICE_PATH)/configs/ecc_list.xml:system/etc/ecc_list.xml
 
 # Graphics
 MTK_GPU_VERSION := mali midgard r7p0

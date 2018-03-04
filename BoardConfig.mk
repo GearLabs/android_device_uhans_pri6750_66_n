@@ -16,8 +16,6 @@
 
 DEVICE_PATH := device/leagoo/f5c62w
 
-include device/mediatek/mt6737-common/BoardConfigCommon.mk
-
 # Board
 BOARD_GLOBAL_CFLAGS += -DMTK_BATTERY_VOLTAGE
 FORCE_32_BIT := true
@@ -54,3 +52,9 @@ DEVICE_RESOLUTION := 1080x1920
 DEVICE_SCREEN_WIDTH := 1080
 DEVICE_SCREEN_HEIGHT := 1920
 TW_THEME := portrait_hdpi
+
+# inherit from the proprietary version
+-include vendor/leagoo/f5c62w/BoardConfigVendor.mk
+
+# inherit common board flags
+include device/mediatek/mt6737-common/BoardConfigCommon.mk

@@ -1,5 +1,5 @@
-import init.mt6735.usb.rc
-import init.mt6735.power.rc
+import init.mt6755.usb.rc
+import init.mt6755.power.rc
 
 on post-fs-data
     # Camera
@@ -49,5 +49,9 @@ on boot
     chmod 664 /sys/devices/soc/soc:touch/enable_gesture
 
 service fingerprintd /system/bin/fingerprintd
-	class late_start
-	user system
+    class late_start
+    user system
+
+service fp /system/bin/fpserver
+    class main
+    user root

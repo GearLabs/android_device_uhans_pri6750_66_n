@@ -13,13 +13,14 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from f5c62w
-$(call inherit-product, device/leagoo/f5c62w/device.mk)
+# Inherit from pri6750_66_n
+$(call inherit-product, device/uhans/pri6750_66_n/device.mk)
 
-PRODUCT_DEVICE := f5c62w
-PRODUCT_NAME := lineage_f5c62w
-PRODUCT_BRAND := Kruger_Matz
-PRODUCT_MODEL := FLOW5PLUS
-PRODUCT_MANUFACTURER := KrugerMatz
+PRODUCT_DEVICE := pri6750_66_n
+PRODUCT_NAME := lineage_pri6750_66_n
+PRODUCT_BRAND := UHANS
+PRODUCT_MODEL := Max2
+PRODUCT_MANUFACTURER := UHANS

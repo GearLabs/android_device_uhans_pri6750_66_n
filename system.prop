@@ -1,8 +1,5 @@
-# Fingerprint
-ro.hardware.fingerprint=ma120n
-
 # Graphics
-ro.sf.lcd_density=320
+ro.sf.lcd_density=480
 
 # Tethering
 wifi.tethering.interface=ap0

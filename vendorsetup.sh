@@ -1,3 +1,3 @@
-add_lunch_combo lineage_f5c62w-user
-add_lunch_combo lineage_f5c62w-userdebug
-add_lunch_combo lineage_f5c62w-eng
+add_lunch_combo lineage_pri6750_66_n-user
+add_lunch_combo lineage_pri6750_66_n-userdebug
+add_lunch_combo lineage_pri6750_66_n-eng
